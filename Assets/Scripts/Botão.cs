@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class Botao : MonoBehaviour
 {
     public GameObject parede;
     public GameObject botao;
-
+    Vector3 posição_inicial;
+    Vector3 posição_inicial_parede;
     public Vector3 alvoBotao;
     public Transform alvoParede;
 
@@ -19,6 +21,12 @@ public class Botao : MonoBehaviour
         {
             ativado = true;
         }
+    }
+
+    void Start()
+    {
+        posição_inicial = transform.position;
+        posição_inicial_parede = parede.transform.position;
     }
 
     void Update()
@@ -36,6 +44,29 @@ public class Botao : MonoBehaviour
                 alvoBotao,
                 speed * Time.deltaTime
             );
+        StartCoroutine(timer_botão());
+        
+        
+        
         }
     }
+
+
+    IEnumerator timer_botão()
+    {
+        if(ativado == true){
+        yield return new WaitForSeconds(2f);
+        botao.transform.position = Vector3.MoveTowards(
+            botao.transform.position,
+            posição_inicial,
+            speed * Time.deltaTime
+        );
+        parede.transform.position = Vector3.MoveTowards(
+            parede.transform.position,
+            posição_inicial_parede,
+            speed * Time.deltaTime
+        );
+        ativado = false;
+    }
+}
 }

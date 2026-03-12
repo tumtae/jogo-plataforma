@@ -14,9 +14,9 @@ public class StarCollect : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Destroy(gameObject, 0);
             ui.AddStar();
             audioSource.Play();
-            Destroy(gameObject, 0.5f);
         }
     }
 }
