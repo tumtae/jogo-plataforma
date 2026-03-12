@@ -2894,8 +2894,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.0799997, y: 3.4999998, z: 0.19999999}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.9497968, y: 3.1028218, z: 0.19999997}
+  m_Center: {x: -0.1785796, y: -0.19858453, z: 0}
 --- !u!212 &1483857371
 SpriteRenderer:
   serializedVersion: 2
@@ -3767,8 +3767,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5523535, y: 0.22899637, z: 0.9999999}
-  m_Center: {x: -0.2761781, y: 0.3855003, z: 0}
+  m_Size: {x: 1.6142694, y: 0.22899637, z: 0.9999999}
+  m_Center: {x: -0.2027355, y: 0.3855003, z: 0}
 --- !u!114 &1711218070
 MonoBehaviour:
   m_ObjectHideFlags: 0
