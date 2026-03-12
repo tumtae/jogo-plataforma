@@ -13,6 +13,7 @@ public class Paredequesemove : MonoBehaviour
     void Start()
     {
         posição_inicial_parede = transform.position;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class Paredequesemove : MonoBehaviour
                 alvoParede.position,
                 speed * Time.deltaTime
             );
-
+            sr.flipX = true;
             
         }
         if (transform.position == alvoParede.position)
@@ -39,6 +40,7 @@ public class Paredequesemove : MonoBehaviour
                 posição_inicial_parede,
                 speed * Time.deltaTime
             );
+                sr.flipX = false;
             
         }
         if(transform.position == posição_inicial_parede)
